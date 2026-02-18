@@ -11,7 +11,8 @@ Tested on Vivado 2024.2
 ---
 
 ## GitHub Actions Testbench
-
+![description of my waveform](waveform.png)
+![description of my waveform](sketch.png)
 The workflow uses the [setup-ghdl-ci](https://github.com/ghdl/setup-ghdl-ci) GitHub action
 to run a *nightly* build of [GHDL](https://ghdl.github.io/ghdl/).
 
@@ -22,3 +23,5 @@ Then it **elaborates** the entity defined by `$TB_ENTITY`
 Finally, the workflow **runs** the simulation. If successful then it will quietly exit with a `0` code.
 If any of the `assert` statements fail then GHDL will cease the simulation and exit with non-zero code; this will also cause the workflow to fail.
 Assert statements of other severity levels will be reported, but not fail the workflow.
+documentation statement:
+I have used chat gpt to assist me with coding especially when I encountered errors
